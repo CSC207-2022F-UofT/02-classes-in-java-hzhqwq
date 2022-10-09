@@ -163,7 +163,7 @@ public class Silly implements Comparable<Silly>{
 
         // Hint: to compare strings, we need to use .equals()
         //       e.g. s1.equals(s2)
-        if (this.equals(other)){
+        if (this.name.equals(other.name)){
             return true;
         }
         return false;
@@ -200,7 +200,9 @@ public class Silly implements Comparable<Silly>{
          *                You can get the length of a string by using the
          *                .length() method.
          */
-        return 0;
+        int myLength = this.name.length();
+        int otherLength = other.name.length();
+        return myLength-otherLength;
     }
 
     /*
